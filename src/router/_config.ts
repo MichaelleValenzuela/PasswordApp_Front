@@ -69,12 +69,14 @@ export const routeConfig = (ROUTES_ADMIN: any, decodeUserNow: any) => {
                     {
                         path: "/modify-profile-user",
                         name: "dash-user-form-modify-profile/:id",
-                        component: import("../components/Dashboard/user/ModifyProfileUser.vue"),
+                        component: () => import("../components/Dashboard/user/ModifyProfileUser.vue"),
+                        //component: import("../components/Dashboard/user/ModifyProfileUser.vue"),
                     },
                     {
                         path: "/form-generate-password",
                         name: "dash-user-form-generate-password",
-                        component: import("../components/Dashboard/user/GeneratePassword.vue"),
+                        component: () => import("../components/Dashboard/user/GeneratePassword.vue"),
+                        //component: import("../components/Dashboard/user/GeneratePassword.vue"),
                     }
                 ]
             })
