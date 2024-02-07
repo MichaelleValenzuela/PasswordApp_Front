@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const connectApiAdminResource = async (IS_AUTH: any, BODY: any, EXTRA: any, CLEAN: any, RESPONSE: any) => {
-    
-    const URI = `http://localhost:7000/${BODY.param}`;
+
+    const URI = `${import.meta.env.VITE_API_URL}${BODY.param}`;
     const HEADER = !IS_AUTH ? {} : { usuario_autorizacion: `${localStorage.getItem("TOKEN_AUTH")}` };
 
     await axios({
@@ -46,7 +46,7 @@ export const connectApiAdminResource = async (IS_AUTH: any, BODY: any, EXTRA: an
 
                 axios({
                     method: 'get',
-                    url: 'http://localhost:7000/admin/get-resources',
+                    url: `${import.meta.env.VITE_API_URL}admin/get-resources`,
                     headers: HEADER
                 })
                     .then(function (res1) {
