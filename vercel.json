@@ -1,8 +1,11 @@
-{  
-  "rewrites": [
-    { 
-        "source": "/confirm/:token*", 
-        "destination": "/confirm" 
+{
+  "routes": [
+    {
+      "src": "/[^.]+",
+      "dest": "/",
+      "status": 200,
+      "source": "/confirm/:token*", 
+      "destination": "/confirm" 
     }
   ]
 }
