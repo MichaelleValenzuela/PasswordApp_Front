@@ -23,7 +23,7 @@ export const connectApiAuth = async (IS_AUTH: any, BODY: any, EXTRA: any, CLEAN:
 
         if (BODY.method === "POST") {
             if (BODY.param === "auth/login") {
-                EXTRA.$toast.success(res.data.msg + " redireccionando", {
+                EXTRA.$toast.success(res.data.msg + " Redireccionando", {
                     position: 'top-right'
                 });
                 localStorage.setItem("TOKEN_AUTH", res.data.data.token_auth);
@@ -32,7 +32,7 @@ export const connectApiAuth = async (IS_AUTH: any, BODY: any, EXTRA: any, CLEAN:
                 }, 2000);
             }
             if (BODY.param === "auth/register") {
-                EXTRA.$toast.success(res.data.msg + " verifica tu correo. redireccionando", {
+                EXTRA.$toast.success(res.data.msg + " verifica tu correo. Redireccionando", {
                     position: 'top-right'
                 });
                 setTimeout(() => {
